@@ -7,6 +7,16 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  * the attempts allowed in the sidebar says 8, while the attempts left in the UI says 7
+  * normal is more difficult that hard due to its wider range, effectively lowering the chances of guessing the right number
+  * once you win, you cannot play a new game without refreshing the page (new game button does not work)
+  * the hint tells you to go lower when the secret number is higher
+  * game ends in 7 failed attempts rather than what is promised, which is 8
+  * the first guess saves the number but doesn't display it until your next guess. then the 3rd guess
+  * the game information always states that the number is between 1 and 100, regardless of which difficulty is selected
+  * the game allows strings or empty strings to be accepted, and can be spammed indefinitely, growing the history
+
+
 
 ---
 
