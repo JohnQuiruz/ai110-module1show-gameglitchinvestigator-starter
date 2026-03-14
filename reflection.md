@@ -5,6 +5,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  * it looked like a number guessing game.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
   * the attempts allowed in the sidebar says 8, while the attempts left in the UI says 7
@@ -23,17 +24,23 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  * Claude
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  * the AI suggested that i move certain codeblocks to adhere to the behavior of streamlit's
+  top-to-bottom render engine. one example was moving the expander beneath the logic that updates the attempt count after every submittal. this prevented the issue where the attempt counter in the debugging window was always 1 number behind, effectively ending the game on the attempt counter still displaying the user has 1 more attempt to use.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+  * Claude stated that the st.success and st.error messages show for every guess, but they don't actually show when show_hint is toggled off.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+  * by hand-tracing through the logic, getting familiar with the code, or using pytest.
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+  * tested the form submittal and observed the different behavior between loading the memory with the input by pressing [enter] and clicking the submit button. the submit button didn't load the input into memory until after the streamlit reload (on-interaction), which caused the input to always be 1 value behind. 
 - Did AI help you design or understand any tests? How?
+  * Yes, prior to Claude showing me, I was unsure about how try/catch blocks and assertions work in Python. Also learned the behavior of Streamlit.
 
 ---
 
