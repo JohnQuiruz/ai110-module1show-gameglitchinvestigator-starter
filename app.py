@@ -84,7 +84,7 @@ if submit:
 
         outcome, message = check_guess(guess_int, secret)
 
-        if show_hint:
+        if show_hint and outcome != "Win":
             st.warning(message)
 
         st.session_state.score = update_score(
