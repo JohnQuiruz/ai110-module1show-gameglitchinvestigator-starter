@@ -48,11 +48,16 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
+Two characteristics about Streamlit that I learned was how it kept track of state by using dictionaries and also how it rendered the page from top to bottom, frequently. I would just explain to them to pay attention to the order of your code logic because it could make or break the code that doesn't adhere to Streamlit's rendering order.
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
+  * prompting an llm to help understand the codebase. find the bugs myself and validate it using an llm. address bugs in separate sessions to keep the objective clear and unambiguous. prompt llm for commit message suggestions or use it to write tests. i like writing the bugs that i see in a separate document that an agent could read. maybe creating an agent that reasons about the bugs that i list in the appropriate document could be a good strategy. a debugging expert agent.
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  * i mentioned these exact points above.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  * maybe prompt the llm more about the framework that i am using to get familiar with the code behavior. i didn't know about the renderign behavior until about halfway through the project. i also want the llm to produce more diagrams for me to get better familiarized with the code. try more experimental ideas to get the llm to help me understand the code better.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  * i used to think that amateurs were truly one-shotting their applications into production but seeing how prone AI is to producing errors in its current state, there is just no way. it's first and foremost an educative tool and boilerplate generator. it will predict correctly the next code that it has seen in its training but it cannot create anything interesting unless it is able to iterate on a problem at an unaffordable rate and while being highly scrutinized by other agents. so it makes sense that a human with much more creativity and better judgment on whether the code is right/wrong, will remain in the shepard and advisor of good code, AI-generated or not.
