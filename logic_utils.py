@@ -37,6 +37,11 @@ def check_guess(guess, secret):
     Compare guess to secret and return (outcome, message).
 
     outcome examples: "Win", "Too High", "Too Low"
+
+    FIX: Removed except TypeError branch that was dead code after the intentional glitch
+    (secret alternating between int and str on even attempts) was removed from app.py.
+    FIX: Corrected inverted hint messages — "Too High" now says "Go LOWER!" and
+    "Too Low" says "Go HIGHER!" (were swapped, sending players in the wrong direction).
     """
     if guess == secret:
         return "Win", "🎉 Correct!"
