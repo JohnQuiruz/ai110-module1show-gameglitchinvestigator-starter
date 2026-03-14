@@ -52,7 +52,7 @@ This is a number guessing game built with Streamlit. The player selects a diffic
 
 ## 📸 Demo
 
-![Picture of PyTest validating 19 checks][https://imgur.com/a/RP9UDdA#pDapR9H]
+![Picture of PyTest validating 19 checks][https://i.imgur.com/pDapR9H.png]
 
 ## 🚀 Stretch Features
 
