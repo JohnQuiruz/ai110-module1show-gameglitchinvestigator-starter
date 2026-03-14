@@ -34,9 +34,9 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     if guess > secret:
-        return "Too High", "📈 Go HIGHER!"
+        return "Too High", "📉 Go LOWER!"
     else:
-        return "Too Low", "📉 Go LOWER!"
+        return "Too Low", "📈 Go HIGHER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
@@ -97,12 +97,6 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 st.subheader("Make a guess")
-
-st.info(
-    f"Guess a number between {low} and {high}. "
-    f"Attempts left: {attempt_limit - st.session_state.attempts}"
-)
-
 
 with st.form("guess_form"):
     raw_guess = st.text_input("Enter your guess:")
@@ -166,6 +160,11 @@ if submit:
                     f"The secret was {st.session_state.secret}. "
                     f"Score: {st.session_state.score}"
                 )
+
+st.info(
+    f"Guess a number between {low} and {high}. "
+    f"Attempts left: {attempt_limit - st.session_state.attempts}"
+)
 
 with st.expander("Developer Debug Info"):
     st.write("Secret:", st.session_state.secret)
