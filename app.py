@@ -75,7 +75,6 @@ if submit:
     ok, guess_int, err = parse_guess(raw_guess)
 
     if not ok:
-        st.session_state.history.append(raw_guess)
         st.error(err)
     else:
         st.session_state.attempts += 1
@@ -91,7 +90,7 @@ if submit:
         st.session_state.score = update_score(
             current_score=st.session_state.score,
             outcome=outcome,
-            attempt_number=st.session_state.attempts,
+            attempt_number=st.session_state.attempts - 1,
         )
 
         if outcome == "Win":
